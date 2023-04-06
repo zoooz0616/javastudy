@@ -2,8 +2,6 @@ package ch05.sec12;
 
 import java.util.Calendar;
 
-import sun.util.resources.ext.CalendarData_es;
-
 public class WeekExample {
 
 	public static void main(String[] args) {

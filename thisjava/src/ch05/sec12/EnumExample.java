@@ -33,6 +33,7 @@ public class EnumExample {
 		default:
 			System.out.println("토/일요일");
 		}
+		System.out.println(today.getValue());
 	}
 
 }

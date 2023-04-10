@@ -24,7 +24,18 @@ public class Pen {
 	public String toString() {
 		return "Pen [color=" + color + "]";
 	}
+//	
+	//메서드
+	//접근 제한자 사용제한자 리턴타입 매개변수 선언 + 실행코드
+	//return은 void가 아닐 때 반드시 추가해야함.
+	//메서드 정의, 메서드 호출(객체 참조)
 	
+	void write() {
+		System.out.println("글을 쓴다.");
+	}
 	
+	void write(String message) {
+		System.out.println(message);
+	}
 	
 }

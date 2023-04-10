@@ -14,6 +14,9 @@ public class ClassExample {
 		
 		Pen p3 = new Pen("red");
 		System.out.println(p3.color);
+		
+		p1.write();
+		p2.write("난 p2");
 	}
 
 }

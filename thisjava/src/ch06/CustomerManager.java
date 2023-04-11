@@ -2,8 +2,6 @@ package ch06;
 
 import java.util.Scanner;
 
-import jdk.jfr.internal.Cutoff;
-
 public class CustomerManager {
 	//배열에 저장가능한 고객 최대 수
 	//final 붙이면 보통 static 같이 붙임.

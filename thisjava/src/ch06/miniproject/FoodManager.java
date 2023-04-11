@@ -57,9 +57,10 @@ public class FoodManager {
 				}
 				return ;
 			}
-			System.out.println("수정할 식자재가 없습니다.");
+			
 			
 		}
+		System.out.println("수정할 식자재가 없습니다.");
 		
 	}
 	
@@ -76,8 +77,9 @@ public class FoodManager {
 				System.out.println("삭제를 완료했습니다.");
 				return ;
 			}
-			System.out.println("삭제할 식자재가 없습니다.");
+			
 		}
+		System.out.println("삭제할 식자재가 없습니다.");
 		
 	}
 

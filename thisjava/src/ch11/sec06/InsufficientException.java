@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package ch11.sec06;
 
 public class InsufficientException extends Exception{
@@ -10,16 +9,3 @@ public class InsufficientException extends Exception{
 		super(message);
 	}
 }
-=======
-package ch11.sec06;
-
-public class InsufficientException extends Exception{
-	public InsufficientException() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public InsufficientException(String message) {
-		super(message);
-	}
-}
->>>>>>> branch 'main' of https://github.com/zoooz0616/javastudy.git

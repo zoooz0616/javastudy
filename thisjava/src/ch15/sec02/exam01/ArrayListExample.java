@@ -19,12 +19,14 @@ public class ArrayListExample {
 		System.out.println();
 		
 		Board board = list.get(2);
-		System.out.println(board.getSubject()+"\t"+board.getContent()+"\t"+board.getWriterString());
+		System.out.println(board.getSubject()+"\t"+
+		board.getContent()+"\t"+board.getWriterString());
 		System.out.println();
 		
 		for (int i = 0; i < list.size(); i++) {
 			Board b = list.get(i);
-			System.out.println(b.getSubject()+"\t"+b.getContent()+"\t"+b.getWriterString());
+			System.out.println(b.getSubject()+"\t"+
+			b.getContent()+"\t"+b.getWriterString());
 		}
 		System.out.println();
 		
@@ -32,7 +34,8 @@ public class ArrayListExample {
 		list.remove(2);
 		
 		for(Board board2 : list) {
-			System.out.println(board2.getSubject()+"\t"+board2.getContent()+"\t"+board2.getWriterString());
+			System.out.println(board2.getSubject()+"\t"+
+		board2.getContent()+"\t"+board2.getWriterString());
 		}
 		
 	}

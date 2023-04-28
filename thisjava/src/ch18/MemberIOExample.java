@@ -22,18 +22,15 @@ public class MemberIOExample {
 		memberlist.add(new Member("홍길동",20,30000,"hong@hong.com"));
 		memberlist.add(new Member("홍길서",24,10000.5,"west@hong.com"));
 		memberlist.add(new Member("홍길남",28,20000,"honghong@hong.com"));
-		
 		FileWriter writer=null;
 		BufferedWriter out = null;
 		try {
 			writer =new FileWriter("member.csv");
 			out=new BufferedWriter(writer);
-			
 			for(Member m:memberlist) {
 				out.write(m.toCSV()+"\n");
 			}
 			System.out.println("file saved");
-			
 		}catch (IOException e) {
 			System.out.println(e.getMessage());
 		}finally {
@@ -43,7 +40,6 @@ public class MemberIOExample {
 				// TODO: handle exception
 			}
 		}
-		
 		try {
 			reader = new FileInputStream("member.data");
 			in=new DataInputStream(reader);

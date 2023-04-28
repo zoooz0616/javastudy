@@ -43,8 +43,5 @@ public class TreeSetExample {
 		for(Integer s: rangeSet) {
 			System.out.print(s+" ");
 		}
-		
-		
-		
 	}
 }

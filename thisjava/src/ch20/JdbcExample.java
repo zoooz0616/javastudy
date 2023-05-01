@@ -16,7 +16,7 @@ public class JdbcExample {
 			con=DriverManager.getConnection(url,"hr","hr");
 			System.out.println(con);
 			
-
+			//데이터 삽입
 			String sql ="insert into employees values (?,?,?,?,?, sysdate, ?,?, ?, ?,?)";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setInt(1, 301);
@@ -32,6 +32,7 @@ public class JdbcExample {
 			stmt.executeUpdate();//insert,update,delete 는 executeUpdate(). select는 executeQuary()로
 			System.out.println("데이터가 입력됐습니다.");
 			
+			//데이터 가져와서 읽기
 //			Statement stmt=con.createStatement();
 //			ResultSet rs = stmt.executeQuery("select * from employees");
 //			while(rs.next()) {

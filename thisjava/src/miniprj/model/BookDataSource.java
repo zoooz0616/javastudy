@@ -1,14 +1,12 @@
-package kr.co.javaspecialist.emp_start.model;
+package miniprj.model;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-
 import org.apache.commons.dbcp2.BasicDataSource;
 
-public class EmpDataSource {
-
+public class BookDataSource {
 	private static final String DRIVER = "oracle.jdbc.OracleDriver";
-	private static final String URL = "jdbc:oracle:thin:@1ocalhost:1521:xe";
+	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static final String USERNAME = "hr";
 	private static final String PASSWORD = "hr";
 	
@@ -40,5 +38,4 @@ public class EmpDataSource {
 			}catch(Exception e) {}
 		}
 	}
-
 }

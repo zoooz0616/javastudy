@@ -30,7 +30,8 @@ public class BookDAO implements IBookDAO{
 	@Override
 	public int insertBook(Book book) {
 		int rowCount=0;
-		String sql="insert into book (cust_name, checkin, checkout, room, pwd) values(?,?,?,?,?)";
+		String sql="insert into book "
+				+ "(cust_name, checkin, checkout, room, pwd) values(?,?,?,?,?)";
 		Connection con=null;
 		try {
 			con=BookDataSource.getConnection();
@@ -51,7 +52,8 @@ public class BookDAO implements IBookDAO{
 
 	@Override
 	public int updateBook(Book book) {
-		String sql="update book set checkin=?, checkout=?, room=? where cust_name=? and pwd=?";
+		String sql="update book set checkin=?, checkout=?, room=? "
+				+ "where cust_name=? and pwd=?";
 		int rowCount=0;
 		Connection con=null;
 		System.out.println(book);
@@ -73,7 +75,6 @@ public class BookDAO implements IBookDAO{
 
 		return rowCount;
 	}
-
 	public boolean login(String name, String password) {
 		String sql="select * from book where cust_name=? and pwd=?";
 		int rowCount=0;

@@ -56,7 +56,7 @@ public class BookDAO implements IBookDAO{
 				+ "where cust_name=? and pwd=?";
 		int rowCount=0;
 		Connection con=null;
-		System.out.println(book);
+//		System.out.println(book);
 		try {
 			con=BookDataSource.getConnection();
 			PreparedStatement stmt=con.prepareStatement(sql);
@@ -75,9 +75,10 @@ public class BookDAO implements IBookDAO{
 
 		return rowCount;
 	}
+	
+	@Override
 	public boolean login(String name, String password) {
 		String sql="select * from book where cust_name=? and pwd=?";
-		int rowCount=0;
 		Connection con=null;
 		try {
 			con=BookDataSource.getConnection();
@@ -116,10 +117,10 @@ public class BookDAO implements IBookDAO{
 	}
 
 	@Override
-	public Book getOne(String name, String password) {
+	public Book getInfo(String name, String password) {
 		String sql="select * from book where cust_name=? and pwd=?";
 		Connection con=null;
-		Book book=new Book();
+		Book book=null;
 		try {
 			con=BookDataSource.getConnection();
 			PreparedStatement stmt=con.prepareStatement(sql);
@@ -127,7 +128,8 @@ public class BookDAO implements IBookDAO{
 			stmt.setString(2, password);
 
 			ResultSet rs=stmt.executeQuery();
-			while(rs.next()) {
+			if(rs.next()) {
+				book=new Book();
 				book.setName(rs.getString("cust_name"));
 				book.setCheckIn(rs.getString("checkin"));
 				book.setCheckOut(rs.getString("checkout"));

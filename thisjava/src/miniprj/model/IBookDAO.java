@@ -8,6 +8,7 @@ public interface IBookDAO {
 	public int updateBook(Book book);
 	
 	public int getBookCount();
-	public Book getOne(String name, String password);
+	public Book getInfo(String name, String password);
 	public ArrayList<Book> getAllBooks();
+	boolean login(String name, String password);
 }
